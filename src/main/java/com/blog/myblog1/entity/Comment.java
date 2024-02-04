@@ -1,6 +1,6 @@
 package com.blog.myblog1.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 public class Comment {
