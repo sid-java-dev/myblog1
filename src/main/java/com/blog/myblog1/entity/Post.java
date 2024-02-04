@@ -2,6 +2,8 @@ package com.blog.myblog1.entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 public class Post {
     @Id
@@ -10,6 +12,8 @@ public class Post {
     private String title;
     private String description;
     private String content;
+    @OneToMany(mappedBy = "post")
+    private List<Comment> comments;
 
     public Long getId() {
         return id;
